@@ -8,10 +8,12 @@ export default defineConfig({
   plugins: [react(), tailwindcss(), probeApiPlugin()],
   server: {
     host: "127.0.0.1",
-    port: 5000,
+    port: 6000,
+    allowedHosts: ["dashboard.home.dx4956s.dev"],
   },
   preview: {
     host: "127.0.0.1",
-    port: 5000,
+    port: 6000,
+    allowedHosts: ["dashboard.home.dx4956s.dev"],
   },
 });
