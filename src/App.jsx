@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <div className="page-bg min-h-screen">
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
+      <div className="mx-auto max-w-[1920px] px-4 py-8 sm:px-6 lg:px-8 sm:py-12">
         <DashboardHeader
           now={now}
           scanning={scanning}
@@ -24,7 +24,7 @@ export default function App() {
           summary={summary}
         />
 
-        <main className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <main className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           {SERVICES.map((service) => (
             <ServiceCard
               key={service.id}
@@ -34,7 +34,7 @@ export default function App() {
           ))}
         </main>
 
-        <footer className="mt-12 text-center text-xs text-[var(--text-muted)]">
+        <footer className="mt-12 border-t border-[var(--border-default)] pt-6 text-center text-xs text-[var(--text-muted)]">
           Probe state lives in memory for this session · Cycle every {Math.round(CYCLE_MS / 1000)}s after a complete pass
         </footer>
       </div>

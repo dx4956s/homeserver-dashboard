@@ -18,23 +18,23 @@ function uptimeColor(uptime) {
 const statusConfig = {
   up: {
     label: "Online",
-    border: "border-[var(--success)]",
+    border: "border-l-[var(--success)]",
     badgeBg: "bg-[var(--success-bg)]",
-    badgeBorder: "border-[var(--success)]",
+    badgeBorder: "border-[var(--success-border)]",
     text: "text-[var(--success)]",
   },
   checking: {
     label: "Checking",
-    border: "border-[var(--warning)]",
+    border: "border-l-[var(--warning)]",
     badgeBg: "bg-[var(--warning-bg)]",
-    badgeBorder: "border-[var(--warning)]",
+    badgeBorder: "border-[var(--warning-border)]",
     text: "text-[var(--warning)]",
   },
   down: {
     label: "Offline",
-    border: "border-[var(--danger)]",
+    border: "border-l-[var(--danger)]",
     badgeBg: "bg-[var(--danger-bg)]",
-    badgeBorder: "border-[var(--danger)]",
+    badgeBorder: "border-[var(--danger-border)]",
     text: "text-[var(--danger)]",
   },
 };
@@ -48,19 +48,19 @@ export function ServiceCard({ service, state }) {
 
   return (
     <article
-      className={`panel flex flex-col rounded-xl p-5 hover-lift border-l-4 ${config.border}`}
+      className={`panel flex flex-col rounded-xl p-5 hover-lift border-l-4 ${config.border} animate-fade-in`}
     >
       <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
+        <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">
-            <h3 className="truncate text-lg font-semibold text-[var(--text-primary)]">
+            <h3 className="truncate text-base font-semibold text-[var(--text-primary)]">
               {service.name}
             </h3>
             <a
               href={domainUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex shrink-0 items-center rounded-md text-[var(--text-muted)] transition hover:text-[var(--primary)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-1"
+              className="inline-flex shrink-0 items-center justify-center rounded-md text-[var(--text-muted)] transition hover:text-[var(--primary)] hover:bg-[var(--bg-tertiary)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-1"
               title={`Open ${service.name} in a new tab`}
               aria-label={`Open ${service.name} in a new tab`}
             >
@@ -81,7 +81,7 @@ export function ServiceCard({ service, state }) {
               </svg>
             </a>
           </div>
-          <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-[var(--text-secondary)]">
+          <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-[var(--text-secondary)]">
             {service.desc}
           </p>
         </div>
@@ -111,11 +111,11 @@ export function ServiceCard({ service, state }) {
 
       <div className="mt-4 grid grid-cols-2 gap-3">
         <div className="panel-inset rounded-lg p-3">
-          <p className="mb-2 text-[10px] uppercase tracking-wide text-[var(--text-muted)]">Recent checks</p>
+          <p className="mb-2 text-[10px] font-medium uppercase tracking-wide text-[var(--text-muted)]">Recent checks</p>
           <Sparkline history={state.history} />
         </div>
         <div className="panel-inset rounded-lg p-3 text-right">
-          <p className="mb-1 text-[10px] uppercase tracking-wide text-[var(--text-muted)]">Healthy</p>
+          <p className="mb-1 text-[10px] font-medium uppercase tracking-wide text-[var(--text-muted)]">Healthy</p>
           <span className={`font-mono text-2xl font-semibold ${uptimeColor(overallUptime)}`}>
             {overallUptime == null ? "-" : `${overallUptime}%`}
           </span>

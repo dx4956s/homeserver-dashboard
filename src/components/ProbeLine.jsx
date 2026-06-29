@@ -7,7 +7,7 @@ export function ProbeLine({ label, status }) {
 
   return (
     <div
-      className="panel-inset rounded-lg px-3.5 py-2.5"
+      className="panel-inset rounded-lg px-3.5 py-2.5 transition hover:border-[var(--border-highlight)]"
       title={probeStatusTitle(status)}
     >
       <div className="flex items-center justify-between gap-2">
@@ -17,7 +17,7 @@ export function ProbeLine({ label, status }) {
         </div>
         {status?.httpCode ? (
           <span
-            className={`rounded bg-[var(--bg-secondary)] px-1.5 py-0.5 font-mono text-[11px] ${
+            className={`rounded-md bg-[var(--bg-secondary)] px-1.5 py-0.5 font-mono text-[11px] ${
               status.ok ? "text-[var(--text-secondary)]" : "text-[var(--danger)]"
             }`}
           >
