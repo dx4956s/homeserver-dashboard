@@ -17,6 +17,8 @@ export const SERVICES = [
   { id: "paperless", name: "paperless-ngx", subdomain: "paperless", port: 8012, desc: "Archive scanned and uploaded documents with OCR, tags, correspondents, and full-text search." },
   { id: "bentopdf", name: "Bento PDF", subdomain: "bentopdf", port: 8013, desc: "Edit, split, merge, and prepare PDFs locally in the browser without uploading documents." },
   { id: "vaultwarden", name: "Vaultwarden", subdomain: "vaultwarden", port: 8014, desc: "Store passwords, passkeys, and secrets in a lightweight server compatible with Bitwarden clients." },
+  { id: "affine", name: "Affine", subdomain: "affine", port: 8015, desc: "Create and collaborate on documents, whiteboards, and knowledge bases in a local-first workspace." },
+  { id: "shlink", name: "Shlink", subdomain: "shlink", port: 8016, desc: "Create short URLs and track clicks, visits, and analytics for your links from a self-hosted server." },
 ];
 
 export const DOMAIN_SUFFIX = ".home.dx4956s.dev";
