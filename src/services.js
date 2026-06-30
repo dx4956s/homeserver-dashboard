@@ -19,6 +19,7 @@ export const SERVICES = [
   { id: "vaultwarden", name: "Vaultwarden", subdomain: "vaultwarden", port: 8014, desc: "Store passwords, passkeys, and secrets in a lightweight server compatible with Bitwarden clients." },
   { id: "affine", name: "Affine", subdomain: "affine", port: 8015, desc: "Create and collaborate on documents, whiteboards, and knowledge bases in a local-first workspace." },
   { id: "kutt", name: "Kutt", subdomain: "kutt", port: 8016, desc: "Create short URLs and track clicks, visits, and analytics for your links from a self-hosted server." },
+  { id: "freshrss", name: "FreshRSS", subdomain: "freshrss", port: 8017, desc: "Aggregate and read RSS/Atom feeds with labels, filters, and multi-user support from a self-hosted reader." },
 ];
 
 export const DOMAIN_SUFFIX = ".home.dx4956s.dev";
