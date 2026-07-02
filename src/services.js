@@ -13,7 +13,7 @@ export const SERVICES = [
   { id: "jellyfin", name: "Jellyfin", subdomain: "jellyfin", port: 8008, desc: "Stream movies, shows, music, and other media from your own server to supported devices." },
   { id: "kavita", name: "Kavita", subdomain: "kavita", port: 8009, desc: "Read and manage manga, comics, ebooks, and serial libraries through a web reader." },
   { id: "navidrome", name: "Navidrome", subdomain: "navidrome", port: 8010, desc: "Stream a personal music library through the web or any Subsonic-compatible music client." },
-  { id: "nextcloud", name: "Nextcloud", subdomain: "nextcloud", port: 8011, desc: "Sync and share files, calendars, contacts, notes, and collaboration apps from your own cloud." },
+  { id: "cryptpad", name: "CryptPad", subdomain: "cryptpad", port: 8011, desc: "Collaborate on encrypted documents, spreadsheets, kanban boards, and whiteboards in a zero-knowledge environment." },
   { id: "paperless", name: "paperless-ngx", subdomain: "paperless", port: 8012, desc: "Archive scanned and uploaded documents with OCR, tags, correspondents, and full-text search." },
   { id: "bentopdf", name: "Bento PDF", subdomain: "bentopdf", port: 8013, desc: "Edit, split, merge, and prepare PDFs locally in the browser without uploading documents." },
   { id: "vaultwarden", name: "Vaultwarden", subdomain: "vaultwarden", port: 8014, desc: "Store passwords, passkeys, and secrets in a lightweight server compatible with Bitwarden clients." },
